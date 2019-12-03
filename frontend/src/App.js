@@ -38,26 +38,29 @@ if (token) {
 // UnauthenticatedRoute : redirect to main page if user is authenticated (ex. login, register, etc)
 class App extends Component {
   render() {
-    return (
-      <Provider store={store}>
-        <Router>
-          <Switch>
-            <Route exact path="/" component={Landing} />
-            <UnauthenticatedRoute exact path="/register" component={Register} />
-            <UnauthenticatedRoute exact path="/login" component={Login} />
-            <Route exact path="/onboarding" component={InitialPref} />
-            <Route exact path="/main" component={Main} />
-            <Route exact path="/details" component={Details} />
-            <AuthenticatedRoute
-              exact
-              path="/user/update"
-              component={UpdateUser}
-            />
-            <Route path="/" component={PageNotFound} />
-          </Switch>
-        </Router>
-      </Provider>
-    );
+    window.location.href =
+      "https://github.com/Project-MKB/project-mkb/tree/dev/backend";
+    return null;
+    // return (
+    //   <Provider store={store}>
+    //     <Router>
+    //       <Switch>
+    //         <Route exact path="/" component={Landing} />
+    //         <UnauthenticatedRoute exact path="/register" component={Register} />
+    //         <UnauthenticatedRoute exact path="/login" component={Login} />
+    //         <Route exact path="/onboarding" component={InitialPref} />
+    //         <Route exact path="/main" component={Main} />
+    //         <Route exact path="/details" component={Details} />
+    //         <AuthenticatedRoute
+    //           exact
+    //           path="/user/update"
+    //           component={UpdateUser}
+    //         />
+    //         <Route path="/" component={PageNotFound} />
+    //       </Switch>
+    //     </Router>
+    //   </Provider>
+    // );
   }
 }
 
